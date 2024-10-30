@@ -18,7 +18,9 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-            checkout scm
+            steps {
+                checkout scm
+            }
         }
         stage('Build WAR') {
             steps {
