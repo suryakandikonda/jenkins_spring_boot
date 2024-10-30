@@ -39,8 +39,7 @@ pipeline {
                     bat 'docker stop spring-tomcat || echo No container to stop'
                     bat 'docker rm spring-tomcat || echo No container to remove'
                     // Run new container
-                    bat 'docker run -d --name spring-tomcat -p 8080:8080 testspringbootapp:latest'
-                    bat 'docker run -d --name spring-tomcat -p 8080:8080 testspringbootapp:latest'
+                    bat 'docker run -d --name spring-tomcat -p 8081:8080 testspringbootapp:latest'
                 }
             }
         }
