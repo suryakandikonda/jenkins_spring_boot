@@ -38,8 +38,8 @@ pipeline {
             steps {
                 script {
                     // Stop any existing container
-                    bat 'docker stop spring-tomcat || echo No container to stop'
-                    bat 'docker rm spring-tomcat || echo No container to remove'
+                    bat 'docker stop spring-tomcat -f || echo No container to stop'
+                    bat 'docker rm spring-tomcat -f || echo No container to remove'
                     // Run new container
                     bat 'docker run -d --name spring-tomcat -p 8081:8080 testspringbootapp:latest'
                 }
